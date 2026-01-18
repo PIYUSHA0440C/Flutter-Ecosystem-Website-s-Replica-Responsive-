@@ -56,12 +56,41 @@ main section.view1 .container .bottom p {
   font-size: 2.1rem;
   line-height: 2.5rem;
 }
-
-.container {
-  max-width: 1280px;
+main section.view2 {
+  width: 100%;
+  padding: 4.5rem 1.5rem;
+}
+main section.view2 .container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 3.5rem;
+}
+main section.view2 .container .block {
+  width: 100%;
+  border-top: 4px solid rgba(0, 0, 0, 0.107);
+  padding: 1.5rem 3.2rem 0rem 0rem;
+}
+main section.view2 .container .block h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+main section.view2 .container .block p {
+  opacity: 0.8;
+  font-size: 1.5rem;
+  margin-bottom: 4.4rem;
+}
+main section.view2 .container .block img {
+  width: 100%;
+  min-height: 1rem;
+  max-width: 37.5rem;
 }
 
-@media (min-width: 770px) and (max-width: 1025px) {
+.container {
+  max-width: 1250px;
+}
+
+@media (min-width: 768px) {
   main section.view1 {
     padding: 1.5rem 2rem;
   }
@@ -88,5 +117,17 @@ main section.view1 .container .bottom p {
   }
   main section.view1 .container .bottom {
     padding: 5rem 19%;
+  }
+  main section.view2 {
+    padding: 4.5rem 2rem;
+  }
+  main section.view2 .container {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    justify-self: center;
+  }
+  main section.view2 .container .block p {
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */
