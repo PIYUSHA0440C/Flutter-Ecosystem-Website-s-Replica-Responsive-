@@ -101,7 +101,7 @@ main section.view2 .container .block img {
     margin-top: 1rem;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1000px) {
   main section.view1 {
     padding: 3.5rem;
   }
