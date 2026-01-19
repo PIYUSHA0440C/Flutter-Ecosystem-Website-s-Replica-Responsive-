@@ -97,6 +97,10 @@ main section.view2 .container .block img {
 main section.view3 {
   width: 100%;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
 }
 main section.view3 .container {
   display: grid;
@@ -129,6 +133,46 @@ main section.view3 .container .bottom p {
 main section.view3 .container .bottom .navigate {
   width: 100%;
 }
+main section.view4, main .view6 {
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(to top right, rgba(255, 255, 0, 0.17), rgba(255, 255, 0, 0.059), transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
+}
+main section.view4 .container, main .view6 .container {
+  display: grid;
+  grid-template-rows: 1fr 1.2fr;
+}
+main section.view4 .container .top img, main .view6 .container .top img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  min-width: 11.5rem;
+  max-width: 37.5rem;
+}
+main section.view4 .container .bottom h4, main .view6 .container .bottom h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.3rem;
+  opacity: 0.7;
+}
+main section.view4 .container .bottom h3, main .view6 .container .bottom h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+main section.view4 .container .bottom p, main .view6 .container .bottom p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  width: 90%;
+  margin-bottom: 1.5rem;
+}
+main section.view4 .container .bottom .navigate, main .view6 .container .bottom .navigate {
+  width: 100%;
+}
 
 .btn {
   width: -moz-fit-content;
@@ -150,6 +194,11 @@ main section.view3 .container .bottom .navigate {
   padding: 0.7rem 1.2rem;
   border: none;
   color: black;
+}
+
+.btn-blue {
+  color: white;
+  background-color: #0468D7;
 }
 
 .btn-transition:hover {
@@ -204,7 +253,7 @@ main section.view3 .container .bottom .navigate {
     font-size: 1.2rem;
   }
   main section.view3 {
-    padding: 4rem;
+    padding: 3rem 4rem;
   }
   main section.view3 .container {
     grid-template-rows: none;
@@ -219,5 +268,16 @@ main section.view3 .container .bottom .navigate {
   main section.view3 .top {
     grid-area: top;
     justify-self: center;
+  }
+  main section.view4, main .view6 {
+    padding: 3rem 4.5rem;
+  }
+  main section.view4 .container, main .view6 .container {
+    grid-template-columns: 1fr 1.6fr;
+    grid-template-rows: none;
+    align-items: center;
+  }
+  main section.view4 .container .bottom, main .view6 .container .bottom {
+    padding: 0rem 10rem 0rem 10rem;
   }
 }/*# sourceMappingURL=style.css.map */
