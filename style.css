@@ -136,7 +136,7 @@ main section.view3 .container .bottom .navigate {
 main section.view4, main .view6 {
   width: 100%;
   padding: 2.5rem 1.5rem;
-  background: linear-gradient(to top right, rgba(255, 255, 0, 0.17), rgba(255, 255, 0, 0.059), transparent);
+  background: linear-gradient(to top right, rgba(255, 255, 0, 0.17), rgba(255, 255, 0, 0.09), transparent);
   display: flex;
   flex-direction: column;
   gap: 0rem;
