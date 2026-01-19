@@ -129,7 +129,8 @@ main section.view3 .container .bottom p {
 main section.view3 .container .bottom .navigate {
   width: 100%;
 }
-main section.view3 .container .bottom .navigate .btn {
+
+.btn {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9rem;
@@ -142,11 +143,18 @@ main section.view3 .container .bottom .navigate .btn {
   text-decoration: none;
   margin-bottom: 0.9rem;
   display: inline-block;
+  transition: all ease 0.3s;
 }
-main section.view3 .container .bottom .navigate .btn.quiet {
+
+.btn.quiet {
   padding: 0.7rem 1.2rem;
   border: none;
   color: black;
+}
+
+.btn-transition:hover {
+  background-color: #0468D7;
+  color: white;
 }
 
 .container {

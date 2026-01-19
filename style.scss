@@ -134,31 +134,39 @@ main{
 
                 .navigate{
                     width: 100%;
-                    .btn{
-                        width: fit-content;
-                        font-size: 0.9rem;
-                        font-weight: bold;
-                        padding: 0.7rem 1.5rem;
-                        background-color: transparent;
-                        color: #0468D7;
-                        border: 1px solid #0468D7;
-                        border-radius: 50px;
-                        text-decoration: none;
-                        margin-bottom: 0.9rem;
-                        display: inline-block;
-                    }
-
-                    .btn.quiet{
-                        padding: 0.7rem 1.2rem;
-                        border: none;
-                        color: black;
-                    }
+                    
                 }
             }
         }
     }
 
 }
+.btn{
+    width: fit-content;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.7rem 1.5rem;
+    background-color: transparent;
+    color: #0468D7;
+    border: 1px solid #0468D7;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-bottom: 0.9rem;
+    display: inline-block;
+    transition: all ease 0.3s;
+}
+
+.btn.quiet{
+    padding: 0.7rem 1.2rem;
+    border: none;
+    color: black;
+}
+
+.btn-transition:hover{
+    background-color: #0468D7;
+    color: white;
+}
+
 
 .container{
     max-width: 1250px;
