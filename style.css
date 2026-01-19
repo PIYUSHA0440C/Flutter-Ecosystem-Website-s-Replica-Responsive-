@@ -40,11 +40,16 @@ main section.view1 .container .top .image {
 }
 main section.view1 .container .top .image img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   min-width: 15.6rem;
   max-width: 37.5rem;
 }
 main section.view1 .container .top .text {
   width: 100%;
+  padding: 0rem 2rem;
 }
 main section.view1 .container .top .text h1 {
   font-size: 2.8rem;
@@ -82,23 +87,84 @@ main section.view2 .container .block p {
 }
 main section.view2 .container .block img {
   width: 100%;
-  min-height: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  min-width: 4rem;
   max-width: 37.5rem;
+}
+main section.view3 {
+  width: 100%;
+  padding: 1.5rem;
+}
+main section.view3 .container {
+  display: grid;
+  grid-template-rows: 1.5fr 1.2fr;
+}
+main section.view3 .container .top img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  min-width: 11.5rem;
+  max-width: 37.5rem;
+}
+main section.view3 .container .bottom h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.3rem;
+  opacity: 0.8;
+}
+main section.view3 .container .bottom h3 {
+  font-size: 2.9rem;
+  margin-bottom: 2rem;
+}
+main section.view3 .container .bottom p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  width: 90%;
+  margin-bottom: 1.5rem;
+}
+main section.view3 .container .bottom .navigate {
+  width: 100%;
+}
+main section.view3 .container .bottom .navigate .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+  background-color: transparent;
+  color: #0468D7;
+  border: 1px solid #0468D7;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-bottom: 0.9rem;
+  display: inline-block;
+}
+main section.view3 .container .bottom .navigate .btn.quiet {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  color: black;
 }
 
 .container {
   max-width: 1250px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 490px) {
   main section.view1 {
     padding: 1.5rem 2rem;
   }
   main section.view1 .text {
-    padding: 0rem 13rem;
+    padding: 0rem 2.5rem;
   }
   main section.view1 .bottom p {
     margin-top: 1rem;
+  }
+  main section.view3 .container .bottom .navigate {
+    flex-direction: row;
   }
 }
 @media (min-width: 1000px) {
@@ -108,12 +174,11 @@ main section.view2 .container .block img {
   main section.view1 .container .top {
     flex-direction: row-reverse;
     text-align: left;
-  }
-  main section.view1 .container .top .text {
-    padding-left: 3.1rem;
+    justify-content: center;
+    gap: 0rem;
   }
   main section.view1 .container .top .text h1 {
-    font-size: 4.5rem;
+    font-size: 4.4rem;
   }
   main section.view1 .container .bottom {
     padding: 5rem 15%;
@@ -129,5 +194,22 @@ main section.view2 .container .block img {
   }
   main section.view2 .container .block p {
     font-size: 1.2rem;
+  }
+  main section.view3 {
+    padding: 4rem;
+  }
+  main section.view3 .container {
+    grid-template-rows: none;
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-areas: "bottom top";
+    align-items: center;
+  }
+  main section.view3 .bottom {
+    grid-area: bottom;
+    padding: 0rem 8.5rem 0rem 3.2rem;
+  }
+  main section.view3 .top {
+    grid-area: top;
+    justify-self: center;
   }
 }/*# sourceMappingURL=style.css.map */
