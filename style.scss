@@ -97,7 +97,7 @@ main{
         }
     }
 
-    section.view3{
+    section.view3,.view5{
         width: 100%;
         padding: 1.5rem;
         @include flex-column();
@@ -144,7 +144,7 @@ main{
     section.view4,.view6{
         width: 100%;
         padding: 2.5rem 1.5rem;
-        background: linear-gradient(to top right,rgba(255, 255, 0, 0.17),rgba(255, 255, 0, 0.09), transparent);
+        background: linear-gradient(to top right,rgba(255, 255, 0, 0.141),rgba(255, 255, 0, 0.086), transparent);
         @include flex-column();
         
         .container{
@@ -173,7 +173,7 @@ main{
                 }
                 p{
                     font-size: 1.2rem;
-                    opacity: 0.8;
+                    opacity: 0.7;
                     width: 90%;
                     margin-bottom: 1.5rem;
                 }
@@ -181,6 +181,36 @@ main{
                 .navigate{
                     width: 100%;
                     
+                }
+            }
+        }
+    }
+
+    section.view7{
+        width: 100%;
+        @include flex-column();
+        padding: 4.5rem 0rem;
+
+        .container{
+            display: grid;
+            overflow: hidden;
+            grid-template-columns: 1fr;
+            background-color: #042449;
+            border-radius: 40px;
+            position: relative;
+            .text{
+                padding: 6rem 3.2rem;
+                z-index: 2;
+            }
+            .media{
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+
+                .img{
+                    object-fit: cover;
+                    object-position: center;
+                    max-width: 100%;
                 }
             }
         }
@@ -226,7 +256,7 @@ main{
 @media (min-width: 490px){
     main{
         section.view1{
-            padding: 1.5rem 2rem;
+            padding: 1.3rem 2rem;
             .text{
                 padding: 0rem 2.5rem;
             }
@@ -235,7 +265,7 @@ main{
             }
         }
 
-        section.view3{
+        section.view3,.view5{
             .container .bottom .navigate{
                 flex-direction: row;
             }
@@ -247,7 +277,7 @@ main{
 @media(min-width: 1000px){
     main{
         section.view1{
-            padding: 3.5rem;
+            padding: 0rem 3.5rem;
             .container{
                 .top{
                     flex-direction: row-reverse;
@@ -282,7 +312,7 @@ main{
 
         }
 
-        section.view3{
+        section.view3,.view5{
             padding: 3rem 4rem;
             .container {
                 grid-template-rows: none;

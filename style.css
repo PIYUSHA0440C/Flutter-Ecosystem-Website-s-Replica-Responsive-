@@ -94,7 +94,7 @@ main section.view2 .container .block img {
   min-width: 4rem;
   max-width: 37.5rem;
 }
-main section.view3 {
+main section.view3, main .view5 {
   width: 100%;
   padding: 1.5rem;
   display: flex;
@@ -102,11 +102,11 @@ main section.view3 {
   gap: 0rem;
   align-items: center;
 }
-main section.view3 .container {
+main section.view3 .container, main .view5 .container {
   display: grid;
   grid-template-rows: 1.5fr 1.2fr;
 }
-main section.view3 .container .top img {
+main section.view3 .container .top img, main .view5 .container .top img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -115,28 +115,28 @@ main section.view3 .container .top img {
   min-width: 11.5rem;
   max-width: 37.5rem;
 }
-main section.view3 .container .bottom h4 {
+main section.view3 .container .bottom h4, main .view5 .container .bottom h4 {
   font-size: 1.2rem;
   margin-bottom: 1.3rem;
   opacity: 0.8;
 }
-main section.view3 .container .bottom h3 {
+main section.view3 .container .bottom h3, main .view5 .container .bottom h3 {
   font-size: 2.9rem;
   margin-bottom: 2rem;
 }
-main section.view3 .container .bottom p {
+main section.view3 .container .bottom p, main .view5 .container .bottom p {
   font-size: 1.2rem;
   opacity: 0.8;
   width: 90%;
   margin-bottom: 1.5rem;
 }
-main section.view3 .container .bottom .navigate {
+main section.view3 .container .bottom .navigate, main .view5 .container .bottom .navigate {
   width: 100%;
 }
 main section.view4, main .view6 {
   width: 100%;
   padding: 2.5rem 1.5rem;
-  background: linear-gradient(to top right, rgba(255, 255, 0, 0.17), rgba(255, 255, 0, 0.09), transparent);
+  background: linear-gradient(to top right, rgba(255, 255, 0, 0.141), rgba(255, 255, 0, 0.086), transparent);
   display: flex;
   flex-direction: column;
   gap: 0rem;
@@ -166,12 +166,44 @@ main section.view4 .container .bottom h3, main .view6 .container .bottom h3 {
 }
 main section.view4 .container .bottom p, main .view6 .container .bottom p {
   font-size: 1.2rem;
-  opacity: 0.8;
+  opacity: 0.7;
   width: 90%;
   margin-bottom: 1.5rem;
 }
 main section.view4 .container .bottom .navigate, main .view6 .container .bottom .navigate {
   width: 100%;
+}
+main section.view7 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
+  padding: 4.5rem 0rem;
+}
+main section.view7 .container {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  background-color: #042449;
+  border-radius: 40px;
+  position: relative;
+}
+main section.view7 .container .text {
+  padding: 6rem 3.2rem;
+  z-index: 2;
+}
+main section.view7 .container .media {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+main section.view7 .container .media .img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  max-width: 100%;
 }
 
 .btn {
@@ -212,7 +244,7 @@ main section.view4 .container .bottom .navigate, main .view6 .container .bottom 
 
 @media (min-width: 490px) {
   main section.view1 {
-    padding: 1.5rem 2rem;
+    padding: 1.3rem 2rem;
   }
   main section.view1 .text {
     padding: 0rem 2.5rem;
@@ -220,13 +252,13 @@ main section.view4 .container .bottom .navigate, main .view6 .container .bottom 
   main section.view1 .bottom p {
     margin-top: 1rem;
   }
-  main section.view3 .container .bottom .navigate {
+  main section.view3 .container .bottom .navigate, main .view5 .container .bottom .navigate {
     flex-direction: row;
   }
 }
 @media (min-width: 1000px) {
   main section.view1 {
-    padding: 3.5rem;
+    padding: 0rem 3.5rem;
   }
   main section.view1 .container .top {
     flex-direction: row-reverse;
@@ -252,20 +284,20 @@ main section.view4 .container .bottom .navigate, main .view6 .container .bottom 
   main section.view2 .container .block p {
     font-size: 1.2rem;
   }
-  main section.view3 {
+  main section.view3, main .view5 {
     padding: 3rem 4rem;
   }
-  main section.view3 .container {
+  main section.view3 .container, main .view5 .container {
     grid-template-rows: none;
     grid-template-columns: 1.6fr 1fr;
     grid-template-areas: "bottom top";
     align-items: center;
   }
-  main section.view3 .bottom {
+  main section.view3 .bottom, main .view5 .bottom {
     grid-area: bottom;
     padding: 0rem 8.5rem 0rem 3.2rem;
   }
-  main section.view3 .top {
+  main section.view3 .top, main .view5 .top {
     grid-area: top;
     justify-self: center;
   }
