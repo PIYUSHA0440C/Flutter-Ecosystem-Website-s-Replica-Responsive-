@@ -20,7 +20,7 @@ html,body {
 main{
     section.view1{
         width: 100%;
-        padding: 1.5rem;
+        padding: 4.5rem 1.5rem;
         @include flex-column();
         text-align: center;
         background: linear-gradient(to top right,#f8bbd0a8,transparent,#e7f8ff);
@@ -99,12 +99,12 @@ main{
 
     section.view3,.view5{
         width: 100%;
-        padding: 1.5rem;
+        padding: 4.5rem 1.5rem;
         @include flex-column();
         
         .container{
             display: grid;
-            grid-template-rows: 1.5fr 1.2fr;
+            grid-template-rows: 1.5fr auto;
             .top{
 
                 img{
@@ -143,13 +143,13 @@ main{
 
     section.view4,.view6{
         width: 100%;
-        padding: 2.5rem 1.5rem;
+        padding: 4.5rem 1.5rem;
         background: linear-gradient(to top right,rgba(255, 255, 0, 0.141),rgba(255, 255, 0, 0.086), transparent);
         @include flex-column();
         
         .container{
             display: grid;
-            grid-template-rows: 1fr 1.2fr;
+            grid-template-rows: 1fr auto;
             .top{
 
                 img{
@@ -189,27 +189,44 @@ main{
     section.view7{
         width: 100%;
         @include flex-column();
-        padding: 4.5rem 0rem;
+        padding: 4.5rem 1.5rem;
 
         .container{
+            width: 100%;
             display: grid;
             overflow: hidden;
             grid-template-columns: 1fr;
             background-color: #042449;
             border-radius: 40px;
+            
             position: relative;
             .text{
-                padding: 6rem 3.2rem;
+                padding: 6rem 3.15rem;
                 z-index: 2;
+                color: white;
+                @include flex-column();
+                align-items: flex-start;
+
+                h3{
+                    font-size: 2.9rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                p{
+                    font-size: 1.15rem;
+                    margin-bottom: 2rem;
+                    line-height: 1.3;
+                }
             }
             .media{
-                position: absolute;
                 z-index: 1;
-                width: 100%;
 
-                .img{
-                    object-fit: cover;
-                    object-position: center;
+                img{
+                    height: 100%;
+                    position: absolute;
+                    bottom: auto;
+                    right: 0;
+                    top: 0;
                     max-width: 100%;
                 }
             }
@@ -230,6 +247,17 @@ main{
     margin-bottom: 0.9rem;
     display: inline-block;
     transition: all ease 0.3s;
+}
+
+.btn.install-btn{
+    background-color: white;
+    color: #0468D7;
+    border: none;
+    padding: 0.7rem 2rem;
+}
+
+.btn.quiet.btn-white{
+    color: white;
 }
 
 .btn.quiet{
@@ -342,5 +370,17 @@ main{
                 }
             }
         }
+        
+        section.view7{
+            .container{
+                grid-template-columns: 1fr minmax(0, 441px);
+                min-height: 315px;
+
+                .text{
+                    padding: 4.375rem;
+                }
+            }
+        }
+
     }
 }
